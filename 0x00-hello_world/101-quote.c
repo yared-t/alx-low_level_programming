@@ -1,8 +1,8 @@
 # include <stdio.h>
 # include <unistd.h>
 /**
- * main - A c program that prints exactly the given data and a line to the standard error
- * Return 1 (Success)
+ * main - A c program that prints exactly the given data and the standard error
+ * Return: always 1 (Success)
  */
 int main(void)
 {
