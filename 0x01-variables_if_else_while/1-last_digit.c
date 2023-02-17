@@ -3,7 +3,7 @@
 #include <stdio.h>
 /**
  * main -A used to know the value of the last digit
- * REturn: 0 (Success)
+ * Return: 0 (Success)
 */
 int main(void)
 {
