@@ -2,6 +2,7 @@
 
 /**
  * abs - used to print the absolute value
+ * @n: used to store the number
  * Return: n if positive
  */
 int _abs(int n)
