@@ -2,6 +2,7 @@
 
 /**
  * _isalpha - prints whether alpha or not
+ * @c: used to store acharacter
  * Return: 1 or Return: 0
  */
 int _isalpha(int c)
