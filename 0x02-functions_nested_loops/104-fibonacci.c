@@ -1,10 +1,8 @@
 #include <stdio.h>
 
 /**
- * main - fibonacci <3
- * Purpose - no hardcode
- *
- * Return:  (Success)
+ * main - fibonacci series upto 98
+ * Return: 0 (Success)
  */
 
 int main(void)
