@@ -1,7 +1,7 @@
 #include "lists.h"
 
 /**
- * add_node - progarm used to add new node
+ * add_nodeint_end - progarm used to add new node
  * @head: used to store the head
  * @n: used to store the number
  * Return: the address or NULL
@@ -23,7 +23,7 @@ listint_t *add_nodeint_end(listint_t **head, const int n)
 		*head = node;
 		return (node);
 	}
-	while (t-> next)
+	while (t->next)
 		t = t->next;
 	t->next = node;
 	return (node);

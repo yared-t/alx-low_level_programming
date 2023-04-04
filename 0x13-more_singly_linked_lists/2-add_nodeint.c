@@ -1,6 +1,6 @@
 #include "lists.h"
 /**
- * add_nodeint - program used to write a function that adds a new node at the beginning
+ * add_nodeint - program used to write a function that adds a new node
  * @n: used to store number
  * @head: used to store head
  * Return: the address new element
