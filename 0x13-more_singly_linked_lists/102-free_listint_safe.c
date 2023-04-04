@@ -7,7 +7,7 @@
  */
 size_t free_listint_safe(listint_t **h)
 {
-	liatint_t *current = *h, *temp;
+	listint_t *current = *h, *temp;
 	size_t count = 0;
 
 	while (current != NULL)
@@ -16,7 +16,7 @@ size_t free_listint_safe(listint_t **h)
 		temp = current;
 		current = current->next;
 		free(temp);
-		if (*current == *h)
+		if (current == *h)
 		{
 			*h = NULL;
 			break;
