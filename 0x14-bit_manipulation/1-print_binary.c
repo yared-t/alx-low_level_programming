@@ -6,14 +6,7 @@
  */
 void print_binary(unsigned long int n)
 {
-	int a;
-
-
-	for (a = 31; a >= 0; a--)
-	{
-		if ((n >> a & 1))
-			printf("1");
-		else
-			printf("0");
-	}
+	if (n > 1)
+		print_binary(n >> 1);
+	_putchar((n & 1) + '0');
 }
