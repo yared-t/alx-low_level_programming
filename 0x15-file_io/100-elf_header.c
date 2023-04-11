@@ -6,7 +6,7 @@
 
 /**
  * error - used to print error
- * @msg: used to store the message
+ * @m: used to store the message
  */
 void error(char *m)
 {
@@ -28,8 +28,8 @@ void elf_header(Elf64_Ehdr *header)
 		printf("%02x ", header->e_ident[i]);
 	}
 	printf("\n");
-	printf("  class:                     %s\n", header->e_ident[EI_CLASS] == ELFCLASS32 ? "ELF32" : "ELF64");
-	printf(" Data:                        %s\n", header->e_ident[EI_DATA] == ELFDATA2MSB ? "2's complement, big endian" : "2's coplement, little endian");
+	printf("class:%s\n", header->e_ident[EI_CLASS] == ELFCLASS32 ? "ELF32" : "ELF64");
+	printf("Data:%s\n", header->e_ident[EI_DATA] == ELFDATA2MSB ? "2's complement, big endian" : "2's coplement, little endian");
 	printf("   version:                   %d\n", header->e_ident[EI_VERSION]);
 	printf("   OS/ABI:                    %d\n", header->e_ident[EI_OSABI]);
 	printf("   ABI version:               %d\n", header->e_ident[EI_ABIVERSION]);
