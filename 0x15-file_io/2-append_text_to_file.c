@@ -8,7 +8,7 @@
  */
 int append_text_to_file(const char *filename, char *text_content)
 {
-	int f, l = 0, w;
+	int f, l = 0, w, r = -1;
 
 	if (!filename)
 		return (-1);
@@ -21,11 +21,10 @@ int append_text_to_file(const char *filename, char *text_content)
 		w = write(f, text_content, l);
 	if (w == -1)
 	{
-		close(f);
-		return (-1);
+		r = -1;
 	}
 	else
-		return (1);
+		r = 1;
 	close(f);
-	return (1);
+	return (r);
 }
