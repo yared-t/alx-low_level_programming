@@ -8,7 +8,7 @@
 #include <sys/stat.h>
 #include <sys/types.h>
 #include <fcntl.h>
-#define REV(n) ((n << 24) | (((n >> 16) << 24) >> 16) | \ (((n << 16) >> 21) << 16) | (n >>  24))
+
 ssize_t read_textfile(const char *filename, size_t letters);
 void check(unsigned char *i);
 void m(unsigned char *i);

@@ -1,6 +1,5 @@
 #include <elf.h>
 #include "main.h"
-#include <stdio.h>
 #define REV(n) ((n << 24) | (((n >> 16) << 24) >> 16) | \
 (((n << 16) >> 24) << 16) | (n >> 24))
 /**
@@ -109,7 +108,7 @@ void os(unsigned char *i)
 	else if (i[EI_OSABI] == ELFOSABI_STANDALONE)
 		printf("Standalone App\n");
 	else
-		pintf("<unknown: %x>\n", i[EI_OSABI]);
+		printf("<unknown: %x>\n", i[EI_OSABI]);
 }
 
 /**
