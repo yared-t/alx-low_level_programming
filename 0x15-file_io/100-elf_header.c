@@ -24,16 +24,15 @@ void m(unsigned char *i)
  */
 void check(unsigned char *i)
 {
-        if (*(i) == 0x7f && *(i + 1) == 'E' &&
-            *(i + 2) == 'L' && *(i + 3) == 'F')
-        {
-                printf("ELF Header:\n");
-        }
-        else
-        {
-                dprintf(STDERR_FILENO, "Error: not valid ELF\n");
-                exit(98);
-        }
+	if (*(i) == 0x7f && *(i + 1) == 'E' && *(i + 2) == 'L' && *(i + 3) == 'F')
+	{
+		printf("ELF Header:\n");
+	}
+	else
+	{
+		dprintf(STDERR_FILENO, "Error: not valid ELF\n");
+		exit(98);
+	}
 }
 /**
  * d - program used to give the data
@@ -70,15 +69,15 @@ void update(unsigned char *i)
  */
 void fun(unsigned char *i)
 {
-        printf("  Class:                             ");
-        if (i[EI_CLASS] == ELFCLASSNONE)
-                printf("This class is invalid\n");
-        else if (i[EI_CLASS] == ELFCLASS32)
-                printf("ELF32\n");
-        else if (i[EI_CLASS] == ELFCLASS64)
-                printf("ELF64\n");
-        else
-                printf("<unknown: %x>\n", i[EI_CLASS]);
+	printf("  Class:                             ");
+	if (i[EI_CLASS] == ELFCLASSNONE)
+		printf("This class is invalid\n");
+	else if (i[EI_CLASS] == ELFCLASS32)
+		printf("ELF32\n");
+	else if (i[EI_CLASS] == ELFCLASS64)
+		printf("ELF64\n");
+	else
+		printf("<unknown: %x>\n", i[EI_CLASS]);
 }
 /**
  * os - program used to give the os
@@ -161,6 +160,7 @@ int main(int argc, char *argv[])
 {
 	int fd, _read, _close;
 	Elf64_Ehdr *file;
+
 
 	if (argc > 2 || argc < 2)
 		dprintf(STDERR_FILENO, "Usage: error in # of args\n"), exit(98);
