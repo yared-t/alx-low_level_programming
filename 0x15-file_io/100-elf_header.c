@@ -2,6 +2,14 @@
 #include "main.h"
 #define REV(n) ((n << 24) | (((n >> 16) << 24) >> 16) | \
 (((n << 16) >> 24) << 16) | (n >> 24))
+void check(unsigned char *i);
+void m(unsigned char *i);
+void fun(unsigned char *i);
+void d(unsigned char *i);
+void update(unsigned char *i);
+void os(unsigned char *i);
+void type(unsigned int t, unsigned char *i);
+void entry(unsigned int e, unsigned char *i);
 /**
  * m - program gives magic number
  * @i: store the ELF struct
