@@ -3,7 +3,7 @@
 /**
  * append_text_to_file - program used to append a file
  * @filename: used to store the file name to be append
- * #text_content: used to store the text content
+ * @text_content: used to store the text content
  * Return: success
  */
 int append_text_to_file(const char *filename, char *text_content)
