@@ -1,7 +1,7 @@
 #include "lists.h"
 
 /**
- * delete_dnodeint_at_index - progrma used to delete 
+ * delete_dnodeint_at_index - progrma used to delete
  * @head: used to store the head node
  * @index: used to store the index
  * Return: sucess
